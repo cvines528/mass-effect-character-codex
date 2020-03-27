@@ -23,7 +23,7 @@ body {
     z-index: -2;
 }
 .container:after {
-    content: 'Normandy';
+    content: 'Shepard';
     position: absolute;
     bottom: 0;
     left: 0;
@@ -73,4 +73,91 @@ body {
 .header ul li:nth-child(3) a,
 .header ul li:nth-child(4) a{
     color: #11326f;
+}
+
+.header ul li a:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #d3e0f8;
+    z-index: -1;
+    transition: 0.5s ease-in-out;
+}
+
+.header ul li a:hover:before,
+.header ul li a.active:before {
+    width: 40px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.content .banner-text {
+    position: relative;
+    max-width: 500px;
+    margin-right: 50px;
+}
+
+.content .banner-text h2 {
+    font-size: 52px;
+    text-transform: uppercase;
+    line-height: 1.2em;
+    color: #4e82e4;
+}
+
+
+
+.content .banner-text p {
+    font-size: 18px;
+    color: #4e82e4;
+    line-height: 1.8em;
+    margin: 20px 0;
+}
+
+.content .banner-text a {
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    color: #4e82e4;
+    letter-spacing: 1px;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 15px;
+}
+
+.content .banner-text a:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 100%;
+    background: #d3e0f8;
+    z-index: -1;
+    transition: 0.5s ease-in-out;
+}
+
+.content .banner-text a:hover:before {
+    width: 100%;
+}
+
+.content .banner-image {
+    position: relative;
+    width: 600px;
+    height: 600px;
+}
+
+.content .banner-image img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    transition: 0.5s;
 }
